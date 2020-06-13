@@ -1,2 +1,25 @@
 <h1>{{title}}</h1>
 <p>Welcome to {{title}}</p>
+
+<form action="/api/user" method="POST">
+    <input type="text" placeholder="First Name" class="form-control" id="firstName" name="firstName">
+    <input type="submit" value="Submit" class="btn btn-primary">
+</form>
+
+<input type="text" placeholder="First Name" id="user" name="user">
+<button onclick="ajaxTest()">Test AJAX</button>
+
+<script>
+    function ajaxTest() {
+        const xhttp = new XMLHttpRequest();
+        console.log(xhttp);
+        xhttp.onreadystatechange = function() {
+            console.log(this)
+            if (this.readyState === 4 && this.status === 200) {
+                console.log(JSON.parse(this.response));
+            }
+        }
+        xhttp.open('GET', '/api/user/Manor', true);
+        xhttp.send();
+    }
+</script>
