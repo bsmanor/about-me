@@ -9,7 +9,12 @@
 <input type="text" placeholder="First Name" id="user" name="user">
 <button onclick="ajaxTest()">Test AJAX</button>
 
+{{document.cookie}}
+
 <script>
+
+    document.cookie = "username=John Doe";
+    console.log(document.cookie);
     function ajaxTest() {
         const xhttp = new XMLHttpRequest();
         console.log(xhttp);
