@@ -4,19 +4,29 @@ const cors = require('cors');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+require('dotenv/config');
 
+// Routes
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 const apiRouter = require('./routes/api');
 
-var app = express();
+// Mongo Database
+const mongoose = require('mongoose');
+let conn = mongoose.connect(
+  process.env.DB_CONNECTION,
+  { useNewUrlParser: true, useUnifiedTopology: true }, 
+  () => { console.log('Connected to MongoDB!'); }
+)
 
+// Initiallize the express app
+const app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 
-
+// Middleware
 app.use(cors());
 app.use(logger('dev'));
 app.use(express.json());
@@ -24,6 +34,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// Middleware routes
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/api', apiRouter);
