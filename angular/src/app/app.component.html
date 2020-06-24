@@ -1,0 +1,22 @@
+<div>
+  <div id="block1" class="full" fxLayout="column" fxLayoutAlign="center center">
+    <div>Hello, my name is manor and I'm a Full-Stack web developer</div>
+    <div [@fadeInOnEnter] [@fadeOutOnLeave] #bot *ngIf="bot" style="width: 100px; height: 70px; margin: 15px 0 15px 0; background-color: brown;">I'm a span</div>
+    <button mat-raised-button color="accent" (click)="bot=!bot">Action</button>
+  </div>
+  
+  <mat-toolbar id="nav-bar" color="primary" fxLayout="row" fxLayoutGap="18px">
+    <span>About</span>
+    <span>Projects</span>
+    <span>Skills</span>
+    <span>Contact</span>
+  </mat-toolbar>
+  
+  <div id="block2" class="full" fxLayout="column" fxLayoutAlign="center center">
+    <div>BLOCK 2</div>
+  </div>
+  
+  <div id="block3" class="full" fxLayout="column" fxLayoutAlign="center center">
+    <div>BLOCK 3</div>
+  </div>
+</div>
