@@ -1,0 +1,11 @@
+<div #projects id="projects" class="full" fxLayout="column" fxLayoutAlign="center center">
+    <div fxLayout="column" fxLayoutAlign="center center">
+        <h1 id="projects-title" class="subtitle color4 main-font">PROJECTS</h1>
+        <div class="underline back-color4" data-aos="fade-right" data-aos-delay="50" data-aos-duration="1000"></div>
+    </div>
+
+    <div id="gallery" style="width: 840px; height: 500px; text-align:center;margin:0; padding:0;">
+        <ng-image-slider [images]="projectsImages" #nav [imageSize]="{width: '50%', height: 250}" slideImage="1"></ng-image-slider>
+    </div>
+
+</div>

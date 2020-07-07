@@ -1,0 +1,13 @@
+@import '../../../colors.scss';
+
+mat-toolbar {
+    --default-height: 50px;
+}
+
+#nav-bar {
+    position: fixed;
+    top: 0;
+    background-color: $color5;
+    color: $text-color1;
+    padding-left: 100px;
+}

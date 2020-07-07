@@ -1,0 +1,16 @@
+@import '../../../colors.scss';
+
+.skill {
+    color: $text-color2;
+    background-color: $text-color3;
+    height: 50px;
+    width: 700px;
+}
+
+.level-indication {
+    position: relative;
+    width: 50px;
+    right: 15px;
+    font-family: $font1;
+    color: $text-color2;
+}

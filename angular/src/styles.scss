@@ -1,4 +1,77 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~animate.css/animate.min';
+@import 'aos/dist/aos.css';
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+
+@import './colors.scss'; // global colors/theme
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { 
+    margin: 0; 
+    padding: 0;
+    font-family: 'Raleway', sans-serif; 
+}
+
+.main-font {
+    font-family: $font1;
+}
+
+.full {
+    width: 100%;
+    height: 100%;
+}
+
+.underline {
+    width: 90%;
+    height: 4px;
+}
+
+.subtitle {
+    font-size: 36pt;
+    line-height: 36pt;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-underline-position: below;
+}
+
+.center-all {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center-vertically {
+    display: flex;
+    align-items: center;
+}
+
+// Colors
+
+.color1 {
+    color: $color1;
+}
+.color2 {
+    color: $color2;
+}
+.color3 {
+    color: $color3;
+}
+.color4 {
+    color: $color4;
+}
+.text-color1 {
+    color: $text-color1;
+}
+.back-color2 {
+    background-color: $color2;
+}
+
+.back-color3 {
+    background-color: $color3;
+}
+.back-color4 {
+    background-color: $color4;
+}
+.back-color5 {
+    background-color: $text-color1;
+}

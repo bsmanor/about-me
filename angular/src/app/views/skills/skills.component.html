@@ -1,0 +1,15 @@
+<div  #skillsElm id="skills" fxLayout="column" fxLayoutGap="20px" fxLayoutAlign="center center" 
+      data-aos="fade-left" data-aos-delay="100" data-aos-duration="1000" data-aos-once="true">
+    <div class="skill" fxLayout="row" *ngFor="let skill of skills">
+
+    <!-- Skill title -->
+    <div class="center-all back-color2" fxFlex="15">{{skill.name}}</div>
+    
+    <!-- Skill level -->
+    <div fxFlex="85" fxLayout="row" fxLayoutAlign="space-between">
+        <div class="back-color3" style="height:100%;" [style.width.%]="skill.level"></div>
+    </div>
+    <span fxFlex class="center-vertically level-indication">{{skill.level}}%</span>
+
+    </div>
+</div>
